@@ -1,0 +1,62 @@
+[theme]
+#theme = "plain"
+theme = "native"
+
+#[theme.overrides]
+#idle_fg = "#ffffff"
+#idle_bg = "#323232"
+#separator_fg = "#5c5c5c"
+#separator_bg = "#323232"
+
+[icons]
+#from ttf-nerd-fonts-symbols-mono
+icons = "material-nf"
+
+[[block]]
+block = "net"
+device = "^wl"
+interval = 20
+#format = " D:$speed_down.eng(prefix:K) U:$speed_up.eng(prefix:K) [$signal_strength] "
+format = "$icon $speed_down.eng(prefix:K) $speed_up.eng(prefix:K)"
+#inactive_format = " WIFI: down "
+#missing_format = " x "
+
+[[block]]
+block = "disk_iostats"
+interval = 20
+#format = " IO: R:$speed_read.eng(prefix:K) W:$speed_write.eng(prefix:K) "
+format = "$icon $speed_read.eng(prefix:K) $speed_write.eng(prefix:K)"
+
+[[block]]
+block = "sound"
+device_kind = "source"
+#format = " MIC: $volume "
+format = "$icon $volume"
+max_vol = 100
+
+[[block]]
+block = "sound"
+device_kind = "sink"
+#format = " VOL: $volume "
+format = "$icon $volume"
+max_vol = 200
+
+#[[block]]
+#block = "bluetooth"
+#interval = 30
+#format = " $icon "
+#disconnected_format = " $icon "
+
+[[block]]
+block = "battery"
+interval = 30
+#format = " BAT: $percentage "
+format = "$icon $percentage"
+#brightness changing?
+
+[[block]]
+block = "time"
+interval = 30
+format = "$timestamp.datetime(f:'%d-%m-%Y %H:%M')"
+
+
