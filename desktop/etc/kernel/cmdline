@@ -1,0 +1,1 @@
+root= rw 8250.nr_uarts=0 slab_nomerge init_on_free=1 page_alloc.shuffle=1 intel_iommu=on ia32_emulation=0 efi=disable_early_pci_dma tsx=off hash_pointers=always vsyscall=none
