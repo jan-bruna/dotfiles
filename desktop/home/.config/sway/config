@@ -28,6 +28,11 @@ set $term alacritty
 # Your preferred application launcher
 set $menu fuzzel
 
+
+#removing window titlebars
+default_border pixel 2
+default_floating_border pixel 2
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -239,6 +244,7 @@ bindsym $mod+r mode "resize"
     # Special key to take a screenshot with grim
     bindsym Print exec grim - | wl-copy
     bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
+
 
 #
 # Status Bar:

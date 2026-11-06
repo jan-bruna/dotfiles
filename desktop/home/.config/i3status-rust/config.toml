@@ -13,6 +13,11 @@ theme = "native"
 icons = "material-nf"
 
 [[block]]
+block = "focused_window"
+driver = "sway_ipc"
+format = "$title  | "
+
+[[block]]
 block = "net"
 device = "^wl"
 interval = 20
